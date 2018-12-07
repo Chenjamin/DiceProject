@@ -10,7 +10,7 @@ public class DiceRunner{
 		Dice dice2 = new Dice();
 		int rolls = 0;
 
-		System.out.println(dice1.getValue() + ", " + dice2.getValue());
+		System.out.println("Initial value of dice\n"+dice1.getValue() + ", " + dice2.getValue()+"\n");
 		for(int i = 0; (dice1.getValue() != dice2.getValue()) || (dice1.getValue() != 1); rolls++){
 			dice1.roll();
 			dice2.roll();
@@ -33,15 +33,14 @@ public class DiceRunner{
 			test = cup.addDie(list.remove(0));
 			System.out.println(test);
 			System.out.println(cup);
-			if(test == -1) break;
+			if(test == -1) {
+				System.out.println();
+				System.out.println("After shake:");
+				cup.shake();
+				System.out.println(cup);
+				break;
+			}
 		}
-		System.out.println();
-		System.out.println("After shake:");
-
-
-		cup.shake();
-
-		System.out.println(cup);
 
 	}
 
