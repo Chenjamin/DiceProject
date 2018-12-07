@@ -1,6 +1,9 @@
 public class DiceRunner{
 
 	public static void main(String [] args){
+
+		//Test 1
+
 		Dice dice1 = new Dice();
 		Dice dice2 = new Dice();
 		int rolls = 0;
@@ -14,5 +17,8 @@ public class DiceRunner{
 		if(rolls != 1) System.out.println("Snake eyes took " + rolls + " rolls");
 		if(rolls == 1) System.out.println("Snake eyes took 1 roll");
 
+		//Test 2
+
 	}
+
 }
