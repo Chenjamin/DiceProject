@@ -19,7 +19,7 @@ public class Dice{
 	}
 
 	public void roll(){
-		value = (int)(Math.random()*this.sides+1);
+		value = (int)(Math.random()*sides+1);
 	}
 
 	public String toString(){

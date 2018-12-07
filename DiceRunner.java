@@ -1,6 +1,9 @@
 public class DiceRunner{
 
 	public static void main(String [] args){
+
+		//Test 1
+
 		Dice dice1 = new Dice();
 		Dice dice2 = new Dice();
 		DiceHolder cup=new DiceHolder();
@@ -14,10 +17,17 @@ public class DiceRunner{
 		}
 		if(rolls != 1) System.out.println("Snake eyes took " + rolls + " rolls");
 		if(rolls == 1) System.out.println("Snake eyes took 1 roll");
+
 		System.out.println(cup.addDie(dice1));
 		System.out.println(cup.addDie(dice2));
 		System.out.println(cup.addDie(dice1));
 		System.out.println(cup.addDie(dice1));
 		System.out.println(cup);
+
+
+		//Test 2
+
+
 	}
+
 }
