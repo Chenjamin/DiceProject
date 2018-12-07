@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class DiceRunner{
 
 	public static void main(String [] args){
@@ -6,7 +8,6 @@ public class DiceRunner{
 
 		Dice dice1 = new Dice();
 		Dice dice2 = new Dice();
-		DiceHolder cup=new DiceHolder();
 		int rolls = 0;
 
 		System.out.println(dice1.getValue() + ", " + dice2.getValue());
@@ -18,15 +19,29 @@ public class DiceRunner{
 		if(rolls != 1) System.out.println("Snake eyes took " + rolls + " rolls");
 		if(rolls == 1) System.out.println("Snake eyes took 1 roll");
 
-		System.out.println(cup.addDie(dice1));
-		System.out.println(cup.addDie(dice2));
-		System.out.println(cup.addDie(dice1));
-		System.out.println(cup.addDie(dice1));
-		System.out.println(cup);
+
 
 
 		//Test 2
+		DiceHolder cup=new DiceHolder();
 
+		ArrayList<Dice> list = new ArrayList<>();
+		int test = 0;
+
+		for(int i = 0; i<Integer.MAX_VALUE; i++){
+			list.add(new Dice((int)(Math.random()*17 +4)));
+			test = cup.addDie(list.remove(0));
+			System.out.println(test);
+			System.out.println(cup);
+			if(test == -1) break;
+		}
+		System.out.println();
+		System.out.println("After shake:");
+
+
+		cup.shake();
+
+		System.out.println(cup);
 
 	}
 
